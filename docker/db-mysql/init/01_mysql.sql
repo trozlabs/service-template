@@ -1,0 +1,31 @@
+
+-- CREATE TABLE USER (
+--     ID          BINARY(16)      PRIMARY KEY,
+--     EMAIL       VARCHAR(255)    DEFAULT NULL,
+--     TOKEN       VARCHAR(255)    DEFAULT NULL,
+--     UPDATED_AT  TIMESTAMP       DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP,
+--     CREATED_AT  TIMESTAMP       DEFAULT NOW()
+-- );
+
+-- CREATE TABLE ROLE (
+--     ID          BINARY(16)      PRIMARY KEY,
+--     NAME        VARCHAR(255)    DEFAULT NULL,
+--     DESCRIPTION VARCHAR(255)    DEFAULT NULL,
+--     VALUE       INT             DEFAULT 0,
+--     UPDATED_AT  TIMESTAMP       DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP,
+--     CREATED_AT  TIMESTAMP       DEFAULT NOW()
+-- );
+
+-- CREATE USER IF NOT EXISTS root@localhost IDENTIFIED BY 'secret';
+-- SET PASSWORD FOR root@localhost = PASSWORD('secret');
+-- GRANT ALL ON *.* TO root@localhost WITH GRANT OPTION;
+
+-- CREATE USER IF NOT EXISTS root@'%' IDENTIFIED BY 'secret';
+-- SET PASSWORD FOR root@'%' = PASSWORD('secret');
+-- GRANT ALL ON *.* TO root@'%' WITH GRANT OPTION;
+
+-- CREATE USER IF NOT EXISTS zoinksappdev@'%' IDENTIFIED BY 'secret';
+-- SET PASSWORD FOR zoinksappdev@'%' = PASSWORD('secret');
+
+-- CREATE DATABASE IF NOT EXISTS zoinks;
+-- GRANT ALL ON zoinks.* TO zoinksappdev@'%';
